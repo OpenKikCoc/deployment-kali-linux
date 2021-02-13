@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  kali_linux_dc:
+    container_name: kali_linux
+    #command: /work/start.sh
+    #build: .
+    image: binacslee/kali_linux:latest
+    environment:
+      DISPLAY_WIDTH: "1920"
+      DISPLAY_HEIGHT: "1080"
+    volumes:
+      - ./:/work
+    ports:
+      - 10000:10000
